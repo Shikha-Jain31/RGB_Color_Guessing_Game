@@ -1,0 +1,102 @@
+<html>
+    <head>
+        <title>RGB Color Guessing Game</title>
+    </head>
+    <style>
+        body{
+            background-color: #232323;
+            margin: 0;
+            font-family: "Montserrat", "Avenir";
+        }
+        .square{
+            background: purple;
+            width: 30%;
+            padding-bottom: 30%;
+            float: left;
+            margin: 1.66%;
+            text-align: center;
+            border-radius: 50%;
+            transition: background 0.6s;            /* transition property isnt builed up for every single browser*/
+            -webkit-transition: background 0.6s;    /*browser prefixes ie it is a engine that browser use*/
+            -moz-transition: background 0.6s;       /*shortform for mozilla which is that firefox use*/
+        }
+        .container{
+            margin: 20px auto;
+            max-width: 600px;
+        }
+        h1{
+            text-transform: uppercase;
+            line-height: 1.1;
+            color: white;
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            font-weight: normal; 
+            background: steelblue;
+            padding: 20px 0;
+        }
+        .stripe{
+            background: white;
+            height: 30px;
+            text-align: center;
+            color: black;
+        }
+        .selected{
+            color: white;
+            background: steelblue;
+        }
+        #colorDisplay{
+            font-size: 200%;
+        }
+        #message{
+            display: inline-block;
+            width: 20%;
+        }
+        button{
+            border: none;
+            background: none;
+            text-transform: uppercase;
+            height: 100%;
+            font-weight: 700;
+            color: steelblue;
+            letter-spacing: 1px;
+            font-size: inherit;
+            transition: all 0.3s;
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            outline: none;
+        }
+        button:hover{
+            color: white;
+            background: steelblue;
+        }
+    
+    </style>
+<body>
+
+    <h1>The Great
+    <br>
+    <span id="colorDisplay">RGB</span>
+    <br>
+    Guessing Game
+    </h1>
+    
+    <div class="stripe">
+        <button id="reset">New Colors</button>
+        <span id="message"></span>
+        <button id="easyBtn">Easy</button>
+        <button id="hardBtn" class="selected" >Hard</button>
+    </div>
+    
+    <div class="container">
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+        <div class="square"></div>
+    </div>
+
+    <script src="stylesheet.js"></script>      
+</body>
+</html>
